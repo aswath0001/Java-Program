@@ -19,6 +19,6 @@ public class Q1 {
             System.out.println(i);
         }
         A.clear();
-        System.out.println(A);
+        System.out.println(A.remove());
     }
 }
