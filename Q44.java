@@ -9,9 +9,9 @@ class Q44 {
             reversed = reversed+original.charAt(i);
         }
         if(original.equals(reversed)){
-            System.out.println("palindrome");
+            System.out.println("Palindrome");
         }else{
-            System.out.println("not a palindrome");
+            System.out.println("Not a palindrome");
         }
     }
 }
