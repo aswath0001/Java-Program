@@ -13,6 +13,6 @@ class Q41 {
                 secondMax= num[i];
             }
         }
-        System.out.println("Second maximum is: " + secondMax);
+        System.out.println("Second maximum number is: " + secondMax);
     }
 }
