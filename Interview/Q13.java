@@ -23,7 +23,7 @@ class Q13 {
             }
          }
      }
-       System.out.print("after removing the duplicate numbers [");
+       System.out.print("after removing the duplicate number [");
        for (int i = 0; i <arr.length; i++) {
            if(arr[i] != visited){
               System.out.print(arr[i]);
