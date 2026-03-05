@@ -1,5 +1,4 @@
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
 
 
@@ -33,7 +32,7 @@ class Q13 {
                     System.out.println(arr[i]);
                     if(i<arr.length-1){
                        for (int j = 0; j <arr.length; j++) {
-                           if(arr[i] != visited){
+                           if(arr[j] != visited){
                             System.out.println(",");
                             break;
                            }
