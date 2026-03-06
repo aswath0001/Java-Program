@@ -6,12 +6,16 @@ class Q18 {
           System.err.print("Enter the number :");
             Scanner scan = new Scanner(System.in);
             int num = scan.nextInt();
-            boolean isPrime = false;
-            while(num>=2){
+            boolean isPrime = true;
+            if(num<2){
+                isPrime = false;
+            }else {
                 for(int i =2; i<=num/2;i++){
-                 isPrime = true;
+                if(num%i==0){
+                     isPrime = false;
                 }
-            }
+                }
+    }
             if(isPrime){
                 System.out.println("prime number");
             }else {
