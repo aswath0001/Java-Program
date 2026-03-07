@@ -13,9 +13,12 @@ class Q19 {
         for (int i = 0; i <num; i++) {
             System.out.print(a);
             c=a+b;
-            b=a;
-             a=c;
-           System.out.print(",");
+            a=b;
+            b=c;
+           
+            if (i < num - 1) {
+                System.out.print(", ");
+            }
         }
       
     }
