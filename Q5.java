@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-class Q5{//greatest of N numbers
+class Q5{//greatest of N number
     public static void main(String[] args) {
        Scanner scan = new Scanner (System.in);
        int temp =0;
