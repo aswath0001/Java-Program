@@ -1,20 +1,16 @@
-//perfect number
 import java.util.Scanner;
 
-class  Q17 {
+class Q18 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number to check its factors:");
         int num = scan.nextInt();
-        int sum=0;
+        System.out.print("The factors of the number "+num+" are :");
         for (int i = 1; i <=num/2; i++) {
             if(num%i==0){
-            sum=sum+i;
+                System.out.print(i+",");
             }
         }
-       if(num==sum){
-            System.out.println("perfect number");
-        }else{
-           System.out.println("not a perfect number"); 
-        }
+        System.out.print(num);
     }
 }
