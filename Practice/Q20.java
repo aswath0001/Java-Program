@@ -1,20 +1,26 @@
 import java.util.Scanner;
 
 class Q20 {
-    public static void main(String[] args){
-       Scanner scan = new Scanner(System.in);
-       System.out.print("Enter the first number:");
-       int a = scan.nextInt();
-        System.out.print("Enter the first number:");
-       int b = scan.nextInt();
-       a=a>b ? a :b;
-       b=a<b ? a:b;
-       int r=0;
-       while(a%b!=0){
-       r=a%b;
-       a=b;
-       b=r;
-       }
-       System.out.println("The greatest common divisor is:"+r);
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int a = scan.nextInt();
+        System.out.print("Enter the second number: ");
+        int b = scan.nextInt();
+        
+        int originalA = a;
+        int originalB = b;
+        
+        // Euclidean algorithm works even if a < b
+        // The first iteration will swap them automatically
+        while (b != 0) {
+            int remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+        
+        System.out.println("GCD of " + originalA + " and " + originalB + " = " + a);
+        
+        scan.close();
     }
 }
