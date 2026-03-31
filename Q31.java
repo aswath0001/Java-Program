@@ -26,6 +26,12 @@ class Truck extends Vehicle{
 }
 class Q31 {
     public static void main(String[] args) {
+        Vehicle V1 = new Vehicle();
+        V1.brand="Volvo";
+        V1.year=2004;
+        V1.StartEngine();
+
         
+
     }
 }

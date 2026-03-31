@@ -8,8 +8,8 @@ class Q20 {
         System.out.print("Enter the second number: ");
         int b = scan.nextInt();
         
-        int originalA = a;
-        int originalB = b;
+        int originalA = a;//30
+        int originalB = b;//40
         
         // Euclidean algorithm works even if a < b
         // The first iteration will swap them automatically

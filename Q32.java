@@ -13,5 +13,7 @@ class Employee extends Person{
 class Q32 {
     public static void main(String[] args) {
         Employee e1 = new Employee("Aswath");
+        System.out.println("Employee name: " + e1.name);
+        
     }
 }
