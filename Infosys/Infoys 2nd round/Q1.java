@@ -5,7 +5,7 @@ class Q1 {
         int max =array[0];
         for (int i = 1; i <array.length; i++) {
             if(array[i]>max){
-                max = array[i];
+                max = array[i];// TC =o(n)  SC=o(1)
             }
         }
         System.out.println("the greatest number in the array is :"+max);

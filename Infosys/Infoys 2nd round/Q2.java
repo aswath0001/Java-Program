@@ -4,7 +4,7 @@ class Q2 {//small number
         int min =array[0];
          for (int i = 1; i < array.length; i++) {
              if(array[i]<min){
-                min=array[i];
+                min=array[i];// TC =o(n)  SC=o(1)
              }
          }
          System.out.println("the smallest number in the array is :"+min);
