@@ -1,4 +1,4 @@
-class Q13 {
+class Q13 {//prefix sum
     public static void pairSum(int arr[]){
       int arr2[]=new int[arr.length];
       arr2[0]=arr[0];
