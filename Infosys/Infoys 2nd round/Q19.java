@@ -2,7 +2,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class Q19 {//longest substring
+class Q19 {//longest substring in a array
     public static int longestSubString(String s){
       Set<Character> set = new HashSet<>();
       int left=0;
