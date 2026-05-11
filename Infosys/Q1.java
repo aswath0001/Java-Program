@@ -10,7 +10,7 @@ class MinimumSwapsEvenOrOdd{
             if(arr[i]%2==0){
                 swaps+=Math.abs(i-evenIndex);
                 evenIndex++;
-            }
+            }//tc=o(n)  sc=o(1) 
         }
         return swaps;
     }

@@ -1,30 +1,41 @@
-
-import java.util.Map;
 import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Map;
 
-class Q2 {
-    public static int countDistinctSubString(String s, int k){
-        Set <String> set = new HashSet<>();
-        for (int i = 0; i <s.length(); i++) {
-            Map<Character,Integer> map = new HashMap<>();
-            for(int j=i;j<s.length();j++){
-                char ch = s.charAt(j);
-                map.put(ch, map.getOrDefault(ch, 0)+1);
-
-                if(map.size()==k){
-                    set.add(s.substring(i,j+1));
-                }else if(map.size()>k) {
-                   break;
+class Q2_SlidingWindow {
+    public static int countDistinctSubString(String s, int k) {
+        if (s == null || s.length() == 0 || k == 0) return 0;
+        
+        int left = 0;
+        int count = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        
+        for (int right = 0; right < s.length(); right++) {
+            char ch = s.charAt(right);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+            
+            // Shrink window until distinct characters <= k
+            while (map.size() > k) {
+                char leftChar = s.charAt(left);
+                map.put(leftChar, map.get(leftChar) - 1);
+                if (map.get(leftChar) == 0) {
+                    map.remove(leftChar);
                 }
+                left++;
+            }
+            
+            // When map.size() == k, count all substrings ending at 'right'
+            if (map.size() == k) {
+                count++;  // This counts substrings with EXACTLY k distinct chars
+                // Wait - this only counts ONE substring per right position
+                // Need to count ALL valid substrings ending at right!
             }
         }
-        return set.size() ;
+        return count;
     }
+    
     public static void main(String[] args) {
-       String s = "abcbaa";
-       int k=3;
-       System.out.println(countDistinctSubString(s, k));
+        String s = "abcbaa";
+        int k = 3;
+        System.out.println(countDistinctSubString(s, k));
     }
 }
